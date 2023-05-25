@@ -32,6 +32,17 @@ public class Note implements Serializable{
 	@Temporal(TemporalType.TIMESTAMP)
 	@CreatedDate
 	private Date createdAt;
+	
+	
+	
+
+	public Note(Long id, @NotBlank String title, @NotBlank String content, Date createdAt) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.content = content;
+		this.createdAt = createdAt;
+	}
 
 	public Long getId() {
 		return id;
@@ -55,6 +66,14 @@ public class Note implements Serializable{
 
 	public void setContent(String content) {
 		this.content = content;
+	}
+
+	public Date getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
 	}
 
 	
